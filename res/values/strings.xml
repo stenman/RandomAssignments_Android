@@ -3,10 +3,9 @@
     <string name="app_name">Christmas Presents Assigner</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">Christmas Presents Assigner</string>
-    <color name="orange">#F5F5F5</color>
     <string name="name">Name</string>
-    <string name="buysto">Buys to</string>
-    <string name="nameInputBtn">Add</string>
-    <string name="assignBtn">Assign!</string>
+    <string name="buys_to">Buys To</string>
+    <string name="btnAddNameToList">Add</string>
+    <string name="btnAssign">Assign!</string>
 
 </resources>
