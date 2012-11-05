@@ -1,77 +1,61 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:weightSum="1.0"
+    android:orientation="vertical" >
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical" >
-        
-		<EditText
-	        android:id="@+id/editText1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_alignParentTop="true"
-	        android:ems="10" >
-	
-	        <requestFocus />
-	    </EditText>
-	
-	    <Button
-	        android:id="@+id/button1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/editText1"
-	        android:layout_alignParentTop="true"
-	        android:layout_toRightOf="@+id/editText1"
-	        android:text="@string/btnAddNameToList" />
+        android:ems="10" 
+        android:inputType="textPersonName">
+        <requestFocus />
+    </EditText>
 
-<!--     <ListView -->
-<!--         android:id="@+id/listView1" -->
-<!--         android:layout_width="match_parent" -->
-<!--         android:layout_height="wrap_content" -->
-<!--         android:layout_above="@+id/button2" -->
-<!--         android:layout_alignParentLeft="true" -->
-<!--         android:layout_alignRight="@+id/linearLayout1" -->
-<!--         android:layout_below="@+id/editText1" > -->
-<!--     </ListView> -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAddNameToList" />
 
-		<ListView
-	        android:id="@+id/listView1"
-	        android:layout_width="fill_parent"
-	        android:layout_height="fill_parent"
-			android:layout_marginLeft="10dip"
-			android:layout_marginRight="10dip"
-			android:layout_weight="0.5"
-			android:background="#FB0"
-			android:scrollbars="none"
-			android:dividerHeight="2dip">
-	    </ListView>
-	
-		<ListView
-	        android:id="@+id/listView2"
-	        android:layout_width="fill_parent"
-	        android:layout_height="fill_parent"
-			android:layout_marginLeft="10dip"
-			android:layout_marginRight="10dip"
-			android:layout_weight="0.5"
-			android:background="#AB0"
-			android:scrollbars="none"
-			android:dividerHeight="2dip">
-	    </ListView>
-	    
-		<Button
-	        android:id="@+id/button2"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentBottom="true"
-	        android:layout_alignParentLeft="true"
-	        android:text="@string/btnAssign" />
-		    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:orientation="horizontal" >
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_weight="0.5"
+            android:background="#FB0"
+            android:dividerHeight="1dip"
+            android:scrollbars="none" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/listView2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_weight="0.5"
+            android:background="#AB0"
+            android:dividerHeight="1dip"
+            android:scrollbars="none" >
+        </ListView>
     </LinearLayout>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnAssign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAssign" />
+
+</LinearLayout>
